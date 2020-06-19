@@ -26,6 +26,7 @@ if(isset($rsid) && isset($sessiontime)){
 
 if(!isset($fp) || !isset($ip) || !isset($domain)) die();
 
+
 if(!(isset($from) && strlen($from) > 5)) $from=$_SERVER['HTTP_REFERER'];
 $sid=substr(md5(time()*rand()), 0, 16);
 
