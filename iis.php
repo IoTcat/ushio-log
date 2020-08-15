@@ -23,6 +23,10 @@ if(isset($rsid) && isset($sessiontime)){
     die();
 }
 
+if(isset($ip) && !isset($fp) && !isset($from)){
+    echo json_encode(array("ip"=>$ip));   
+    die();
+}
 
 if(!isset($fp) || !isset($ip) || !isset($domain)) die();
 
